@@ -1,5 +1,7 @@
 [general]
 
+# 下载alacritty-theme
+import = ["alacritty-theme/themes/tokyo_night.toml"]
 working_directory = "None"
 
 [window]
