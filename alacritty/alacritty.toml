@@ -1,0 +1,24 @@
+[general]
+
+working_directory = "None"
+
+[window]
+
+decorations = "None"
+startup_mode = "Maximized"
+
+[font]
+
+normal = { family = "Hack Nerd Font", style = "Regular" }
+size = 16
+
+[terminal.shell]
+
+program = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+
+[keyboard]
+
+bindings = [
+	{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+	{ key = "D", mods = "Control|Shift", command = { program = "alacritty", args = ["--command", "wsl -d Debian --cd ~"] }},
+]
