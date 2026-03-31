@@ -1,0 +1,28 @@
+{
+    "launchMode": "maximized",
+    "compatibility": {
+        "enableUnfocusedAcrylic": true
+    },
+    "alwaysShowTabs": false,
+    "showTabsInTitlebar": false,
+    "useAcrylicInTabRow": true,
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "actions": [],
+    "keybindings": [],
+    "profiles": {
+        "defaults": {
+            "font": {
+                "face": "JetBrainsMono Nerd Font",
+                "features": { "rlig": 1 },
+                "size": 16
+            },
+            "opacity": 50,
+            "useAcrylic": true,
+            "hidden": false
+        },
+        "list": []
+    }
+}
+
+
