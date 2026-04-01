@@ -18,7 +18,8 @@
             },
             "opacity": 80,
             "useAcrylic": true,
-            "hidden": false
+            "hidden": false,
+            "closeOnExit": "automatic"
         },
         "list": []
     }
