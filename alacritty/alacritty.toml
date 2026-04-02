@@ -16,7 +16,9 @@ size = 16
 
 [terminal.shell]
 
-program = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+# 默认开启的终端
+# program = "pwsh"
+# args = ["-wd ~"]
 
 [keyboard]
 
