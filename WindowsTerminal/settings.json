@@ -1,4 +1,6 @@
 {
+    // 修改默认Profile
+    // "defaultProfile": guid,
     "launchMode": "maximized",
     "compatibility": {
         "enableUnfocusedAcrylic": true
