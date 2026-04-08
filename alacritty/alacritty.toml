@@ -1,6 +1,6 @@
 [general]
 
-# 下载alacritty-theme
+# https://github.com/alacritty/alacritty-theme.git
 import = ["alacritty-theme/themes/tokyo_night.toml"]
 working_directory = "None"
 
@@ -16,13 +16,12 @@ size = 16
 
 [terminal.shell]
 
-# 默认开启的终端
-# program = "pwsh"
-# args = ["-wd ~"]
+# Windows下开启WSL
+# program = "wsl.exe"
+# args = ["-d Debian", "--cd ~"]
 
 [keyboard]
 
 bindings = [
 	{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
-	{ key = "D", mods = "Control|Shift", command = { program = "alacritty", args = ["--command", "wsl -d Debian --cd ~"] }},
 ]
