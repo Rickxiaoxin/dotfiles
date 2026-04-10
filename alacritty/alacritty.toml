@@ -26,6 +26,10 @@ vi_mode_cursor = { text = "#181818", cursor = "#d8d8d8" }
 # program = "wsl.exe"
 # args = ["-d Debian", "--cd ~"]
 
+# Linux configuration
+# program = "/bin/bash"
+# args = []
+
 [keyboard]
 
 bindings = [
