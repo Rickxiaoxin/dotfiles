@@ -14,6 +14,12 @@ startup_mode = "Maximized"
 normal = { family = "Hack Nerd Font", style = "Regular" }
 size = 16
 
+[colors]
+
+primary = { foreground = "#d8d8d8", background = "#181818" }
+cursor = { text = "#181818", cursor = "#d8d8d8" }
+vi_mode_cursor = { text = "#181818", cursor = "#d8d8d8" }
+
 [terminal.shell]
 
 # Windows下开启WSL
