@@ -1,0 +1,12 @@
+# Linux下忽略Windows Terminal配置
+WindowsTerminal
+
+# 忽略templates目录
+templates
+
+.git
+.gitignore
+
+LICENSE
+
+README.md
