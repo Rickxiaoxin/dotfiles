@@ -17,3 +17,7 @@ stow -t ~ .
 cd dotfiles
 stow -D -t ~ .
 ```
+
+## Windows
+
+windows系统下使用Windows Terminal，考虑其profiles配置，选择手动管理。
