@@ -20,4 +20,18 @@ stow -D -t ~ .
 
 ## Windows
 
-windows系统下使用Windows Terminal，考虑其profiles配置，选择手动管理。
+
+```powershell
+cd dotfiles
+. .\syncWindows.ps1
+```
+
+可先测试查看运行结果，无实际操作:
+```powershell
+Sync-DotfilesFromRepo -DryRun
+```
+
+执行实际操作:
+```powershell
+Sync-DotfilesFromRepo -DryRun
+```
