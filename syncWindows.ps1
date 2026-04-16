@@ -1,3 +1,35 @@
+# 自动卸载软链接函数
+function Unlink-DotfilesFromRepo {
+    param(
+        [switch]$DryRun
+    )
+
+    $mappings = @(
+        @{ Name = 'WindowsTerminal'; Target = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" },
+        @{ Name = 'Starship'; Target = Join-Path $env:USERPROFILE '.config\starship.toml' }
+    )
+
+    foreach ($map in $mappings) {
+        $dst = $map.Target
+        if (!(Test-Path $dst)) {
+            Write-Host "Target for $($map.Name) not found: $dst. Skipping." -ForegroundColor Yellow
+            continue
+        }
+        $item = Get-Item $dst -Force
+        $isLink = ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0
+        if ($isLink -and $item.LinkType -eq 'SymbolicLink') {
+            if ($DryRun) {
+                Write-Host "[DryRun] Would remove symlink: $dst -> $($item.Target)"
+            } else {
+                Remove-Item $dst -Force
+                Write-Host "Removed symlink: $dst" -ForegroundColor Green
+            }
+        } else {
+            Write-Host "Target for $($map.Name) is not a symbolic link: $dst. Skipping." -ForegroundColor Yellow
+        }
+    }
+}
+
 function Sync-WindowsDotfile {
     param(
         [Parameter(Mandatory=$true)]
@@ -74,10 +106,15 @@ function Sync-DotfilesFromRepo {
 }
 
 
-# ================== 测试代码 ==================
-# 仅操作 $env:TEMP 下的测试文件，便于手动检查软链接功能
-# $testSource = "$env:TEMP\test_source.txt"
-# $testSymlink = "$env:TEMP\test_symlink.txt"
+# ================== 示例调用 ==================
+# 批量同步：
+#   Sync-DotfilesFromRepo
+# 批量 DryRun：
+#   Sync-DotfilesFromRepo -DryRun
+# 卸载软链接：
+#   Unlink-DotfilesFromRepo
+# 卸载软链接 DryRun：
+#   Unlink-DotfilesFromRepo -DryRun
 
 # 创建测试源文件
 # 'this is a test file' | Set-Content -Encoding UTF8 $testSource
