@@ -46,14 +46,14 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{669d9168-8808-5c92-8164-4a06569eb3fa}",
-                "name": "Debian",
-                "source": "Microsoft.WSL"
+                "commandline": "wsl.exe -d Debian --cd ~",
+                "icon": "%LocalAppData%\\wsl\\{242406e5-b1cf-42f9-a4e1-b377a20f187c}\\shortcut.ico",
+                "name": "Debian"
             },
             {
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
-                "name": "Git Bash",
-                "source": "Git"
+                "commandline": "%ProgramFiles%\\Git\\bin\\bash.exe -li",
+                "icon": "%ProgramFiles%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash"
             }
         ]
     },
