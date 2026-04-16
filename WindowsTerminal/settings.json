@@ -3,12 +3,6 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [],
     "defaultProfile": "{b6d28cf0-b245-59cb-a780-b728ed6c082e}",
-    "disabledProfileSources": [
-        "Windows.Terminal.Wsl",
-        "Windows.Terminal.Azure",
-        "Windows.Terminal.PowershellCore",
-        "Windows.Terminal.SSH"
-    ],
     "keybindings": [],
     "launchMode": "maximized",
     "newTabMenu": [
@@ -48,16 +42,12 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "commandline": "powershell.exe",
-                "guid": "{e72abb56-ab17-50cf-9780-9bbd9b2b850c}",
-                "name": "PowerShell",
-                "startingDirectory": "%USERPROFILE%"
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell"
             },
             {
-                "commandline": "cmd.exe",
-                "guid": "{9d434cee-6d5a-544b-bafa-db22607aae28}",
-                "name": "CommandPrompt",
-                "startingDirectory": "%USERPROFILE%"
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "Command Prompt"
             }
         ]
     },

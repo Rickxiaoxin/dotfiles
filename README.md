@@ -22,29 +22,25 @@ stow -D -t ~ .
 
 ```powershell
 cd dotfiles
-. .\syncWindows.ps1
+```
+
+在WindowsMappings.ps1文件中可添加配置文件路径。
+可在运行脚本中增加`-DryRun`，测试查看运行结果，但不实际运行。
+```powershell
+.\CreateSymlinks.ps1 -DryRun
+.\RemoveSymlinks.ps1 -DryRun
 ```
 
 ### 安装
 
-可先测试查看运行结果，无实际操作:
-```powershell
-Sync-DotfilesFromRepo -DryRun
-```
-
 执行实际操作:
 ```powershell
-Sync-DotfilesFromRepo
+.\CreateSymlinks.ps1
 ```
 
 ### 卸载
 
-可先测试查看运行结果，无实际操作:
-```powershell
-Unlink-DotfilesFromRepo -DryRun
-```
-
 执行实际操作:
 ```powershell
-Unlink-DotfilesFromRepo
+.\RemoveSymlinks.ps1
 ```
