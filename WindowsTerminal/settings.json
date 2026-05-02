@@ -2,7 +2,7 @@
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [],
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
     "keybindings": [],
     "launchMode": "maximized",
     "newTabMenu": [
@@ -25,6 +25,13 @@
             "useAcrylic": true
         },
         "list": [
+            {
+                "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+                "name": "UCRT64",
+                "commandline": "%MSYS2%/msys2_shell.cmd -defterm -here -no-start -ucrt64",
+                "startingDirectory": "C:/msys64/home/%USERNAME%",
+                "icon": "C:/msys64/ucrt64.ico"
+            },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
