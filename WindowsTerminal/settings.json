@@ -30,7 +30,7 @@
                 "name": "UCRT64",
                 "commandline": "%MSYS2%/msys2_shell.cmd -defterm -here -no-start -ucrt64",
                 "startingDirectory": "%MSYS2%/home/%USERNAME%",
-                "icon": "C:/msys64/ucrt64.ico"
+                "icon": "%MSYS2%/ucrt64.ico"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
